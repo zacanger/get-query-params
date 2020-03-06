@@ -1,0 +1,10 @@
+* text=auto
+
+text eol=lf
+
+*.pdf diff=astextplain
+*.PDF diff=astextplain
+
+package-lock.json -diff
+
+*.js linguist-language=TypeScript

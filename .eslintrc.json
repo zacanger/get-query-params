@@ -1,0 +1,20 @@
+{
+  "root": true,
+  "plugins": [
+    "zacanger"
+  ],
+  "extends": [
+    "plugin:zacanger/recommended",
+    "plugin:zacanger/typescript",
+    "plugin:zacanger/prettier-ts",
+    "plugin:zacanger/jest"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "fp/no-unused-expression": 0,
+    "fp/no-nil": 0
+  }
+}
