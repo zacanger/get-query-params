@@ -1,15 +1,13 @@
-const getQueryParams = (search = '') => {
-  const params = {}
+const getQueryParams = (search = '') =>
   search
     .substring(1)
     .split('&')
     .filter((value) => value.trim().length)
-    .forEach((part) => {
-      const [key, value] = part.split('=')
+    .reduce((prev, curr) => {
+      const [key, val] = curr.split('=')
       // eslint-disable-next-line fp/no-mutation
-      params[key.toLowerCase()] = decodeURIComponent(value)
-    })
-  return params
-}
+      prev[key.toLowerCase()] = decodeURIComponent(val)
+      return prev
+    }, {})
 
 export default getQueryParams
