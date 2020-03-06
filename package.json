@@ -15,10 +15,9 @@
     "build:rollup": "rollup -c",
     "format": "prettier --write *.js \"src/*.ts\"",
     "postbuild": "tsc --emitDeclarationOnly 2>&1 >/dev/null || true",
-    "prebuild": "sortpack && npm run test:build",
+    "prebuild": "sortpack && npm run test",
     "preversion": "npm run build",
     "test": "run-s -s test:lint test:cover",
-    "test:build": "run-s -s test:lint",
     "test:cover": "npm run test:jest -- --coverage --no-cache",
     "test:jest": "jest",
     "test:lint": "eslint --ext .ts,.js -c .eslintrc.json src"
@@ -105,6 +104,9 @@
       "prettier --write"
     ]
   },
+  "package.json": [
+    "sortpack"
+  ],
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
