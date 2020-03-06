@@ -7,11 +7,11 @@
     "name": "Zac Anger",
     "url": "http://zacanger.com"
   },
+  "license": "LGPL-3.0",
+  "main": "lib/index.js",
   "files": [
     "lib"
   ],
-  "license": "LGPL-3.0",
-  "main": "lib/index.js",
   "scripts": {
     "build": "run-s -s build:clean build:rollup",
     "build:clean": "rm -rf lib && mkdir -p lib",
@@ -105,11 +105,11 @@
   "lint-staged": {
     "*.ts": [
       "prettier --write"
+    ],
+    "package.json": [
+      "sortpack"
     ]
   },
-  "package.json": [
-    "sortpack"
-  ],
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
