@@ -13,7 +13,7 @@ export default {
   output: {
     file: 'lib/index.js',
     format: 'umd',
-    name: 'boilerplate',
+    name: 'get-query-params',
     sourcemap: true,
   },
   plugins: [

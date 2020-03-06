@@ -1,17 +1,16 @@
 /* eslint-env jest */
 
-import { id, keep } from './'
+import getQueryParams from '.'
 
-describe('index', (): void => {
-  describe('id', (): void => {
-    it('is the identity function', (): void => {
-      expect(id(1)).toBe(1)
-    })
+describe('getQueryParams', () => {
+  test('it returns empty obj without location.search', () => {
+    expect(getQueryParams()).toEqual({})
   })
 
-  describe('keep', (): void => {
-    it('keeps truthy items', (): void => {
-      expect(keep([false, true, 0, 1, '', 'asdf'])).toEqual([true, 1, 'asdf'])
+  test('it returns the params in an object', () => {
+    expect(getQueryParams('?foo=bar&baz=qux')).toEqual({
+      foo: 'bar',
+      baz: 'qux',
     })
   })
 })
