@@ -7,6 +7,9 @@
     "name": "Zac Anger",
     "url": "http://zacanger.com"
   },
+  "files": [
+    "lib"
+  ],
   "license": "LGPL-3.0",
   "main": "lib/index.js",
   "scripts": {
