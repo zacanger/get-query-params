@@ -14,7 +14,7 @@ import getQueryParams from 'get-query-params'
 const params = getQueryParams(window.location.search)
 // Returns a JS object
 
-// If the url is http://example.com?foo=bar%baz=quux,
+// If the url is http://example.com?foo=bar&baz=quux,
 // return value is
 { foo: 'bar', baz: 'quux' }
 ```
